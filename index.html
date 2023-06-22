@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Day 5</h1><br><br>
+    <h2>Create a button , on click of which new Heading tag h1 should be added with text as "MERN stack" on the screen above button</h2>
+    <pre>
+        &lt;button id="add-button" onclick="addHeading()">Add heading&lt;/button>
+        &lt;script>
+        function addHeading() {
+          let h1 = document.createElement("h1");
+          h1.textContent = "MERN stack";
+          let button = document.getElementById("add-button");
+          button.parentNode.insertBefore(h1, button);
+        }
+        &lt;/script>
+    </pre>
+    <button id="add-button" onclick="addHeading()">Add heading</button><hr>
+    <h2>Write code to get 1st H1 element from a webpage using DOM</h2>
+    <pre>
+        &lt;button id="1st-button" onclick="getFirstHeading()">Get 1st H1&lt;/button>
+        &lt;script>
+          function getFirstHeading() {
+            let out = document.getElementsByTagName("h1")[0].textContent;
+            let h1 = document.createElement("h1");
+            h1.textContent = out;
+            let button = document.getElementById("1st-button");
+            button.parentNode.insertBefore(h1, button.nextSibling);
+          }
+          &lt;/script> 
+    </pre>
+    <button id="1st-button" onclick="getFirstHeading()">Get 1st H1</button><hr>
+    <h2>Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h2>
+    <pre>
+        &lt;style>
+            #clock {
+                text-align: center;
+            }
+        &lt;/style>
+        &lt;h2 id="clock">&lt;/h2>
+        &lt;script>
+            function clock(){
+                let time = new Date();
+                let hour = time.getHours();
+                let minutes = time.getMinutes();
+                let seconds = time.getSeconds();
+                let amPm = "AM";
+                if(hour > 12){
+                    hour -= 12;
+                    amPm = "PM"
+                }
+                let clock = hour.toString().padStart(2, '0')+" Hours "+ ':' + 
+                    minutes.toString().padStart(2, '0')+" Minutes "+ ':' +
+                    seconds.toString().padStart(2, '0')+" Seconds "+amPm;
+                    document.getElementById("clock").textContent = clock;
+            }
+            setInterval(clock, 1000);
+        &lt;/script>
+    </pre>
+    <h3 id="clock"></h3><hr>
+    <h2>Q5. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on
+        this button page content should be changed to "Welcome to Elevation academy"
+    </h2>
+    <pre>
+        &lt;div id="Replace">Hello World&lt;/div>
+        &lt;button onclick="newText()">Click Here for Change Text&lt;/button>
+        &lt;script>
+            function newText() {
+                document.getElementById("Replace").innerHTML = "Welcome to Elevation academy";
+            }
+        &lt;/script>
+    </pre>
+    <div id="Replace">Hello World</div>
+    <button onclick="newText()">Click Here for Change Text</button><hr>
+    <h2>Create an HTML page having content as Hello world and a button named "Hide Text." When user will click on this button hide the "Hello World" text</h2>
+    <pre>
+        &lt;div id="hide">Hello World&lt;/div>
+        &lt;button onclick="hideText()">Click Here for Hide Text&lt;/button>
+        &lt;script>
+            function hideText() {
+                document.getElementById("hide").style.display ="none" ;
+            }
+        &lt;/script>
+    </pre>
+    <div id="hide">Hello World</div>
+    <button onclick="hideText()">Click Here for Hide Text</button><hr>
+    <script src="Script.js"></script>
+</body>
+</html>
