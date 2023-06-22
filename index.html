@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,17 @@
         h1 {
             text-align: center;
         }
+
+        #clock {
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
     <h1>JS Day 5</h1><br><br>
-    <h2>Create a button , on click of which new Heading tag h1 should be added with text as "MERN stack" on the screen above button</h2>
+    <h2>Create a button , on click of which new Heading tag h1 should be added with text as "MERN stack" on the screen
+        above button</h2>
     <pre>
         &lt;button id="add-button" onclick="addHeading()">Add heading&lt;/button>
         &lt;script>
@@ -24,7 +31,8 @@
         }
         &lt;/script>
     </pre>
-    <button id="add-button" onclick="addHeading()">Add heading</button><hr>
+    <button id="add-button" onclick="addHeading()">Add heading</button>
+    <hr>
     <h2>Write code to get 1st H1 element from a webpage using DOM</h2>
     <pre>
         &lt;button id="1st-button" onclick="getFirstHeading()">Get 1st H1&lt;/button>
@@ -38,8 +46,10 @@
           }
           &lt;/script> 
     </pre>
-    <button id="1st-button" onclick="getFirstHeading()">Get 1st H1</button><hr>
-    <h2>Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h2>
+    <button id="1st-button" onclick="getFirstHeading()">Get 1st H1</button>
+    <hr>
+    <h2>Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+    </h2>
     <pre>
         &lt;style>
             #clock {
@@ -66,7 +76,8 @@
             setInterval(clock, 1000);
         &lt;/script>
     </pre>
-    <h3 id="clock"></h3><hr>
+    <h3 id="clock"></h3>
+    <hr>
     <h2>Q5. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on
         this button page content should be changed to "Welcome to Elevation academy"
     </h2>
@@ -80,8 +91,10 @@
         &lt;/script>
     </pre>
     <div id="Replace">Hello World</div>
-    <button onclick="newText()">Click Here for Change Text</button><hr>
-    <h2>Create an HTML page having content as Hello world and a button named "Hide Text." When user will click on this button hide the "Hello World" text</h2>
+    <button onclick="newText()">Click Here for Change Text</button>
+    <hr>
+    <h2>Create an HTML page having content as Hello world and a button named "Hide Text." When user will click on this
+        button hide the "Hello World" text</h2>
     <pre>
         &lt;div id="hide">Hello World&lt;/div>
         &lt;button onclick="hideText()">Click Here for Hide Text&lt;/button>
@@ -92,7 +105,9 @@
         &lt;/script>
     </pre>
     <div id="hide">Hello World</div>
-    <button onclick="hideText()">Click Here for Hide Text</button><hr>
+    <button onclick="hideText()">Click Here for Hide Text</button>
+    <hr>
     <script src="Script.js"></script>
 </body>
+
 </html>
